@@ -1,0 +1,2 @@
+TouchGFX_DataTransfer.c:12:10:touchgfxDisplayDriverTransmitActive	4	static
+TouchGFX_DataTransfer.c:17:6:touchgfxDisplayDriverTransmitBlock	24	static
