@@ -58,16 +58,18 @@ static void MX_CRC_Init(void);
 static void MX_FSMC_Init(void);
 static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
-
+extern void DisplayDriver_TransferCompleteCallback();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+extern void touchgfxSignalVSync(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance == TIM2)
 	{
 		SSD1963_GPIO_Toggle();
+		touchgfxSignalVSync();
 	}
 }
 
@@ -309,7 +311,18 @@ static void MX_FSMC_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+uint8_t isTransmittingData = 0;
+int touchgfxDisplayDriverTransmitActive()
+{
+	//return LCD_isBusy(0x50, 0x80);
+	return isTransmittingData;
+}
+void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h)
+{
+	isTransmittingData = 1;
+	LCD_drawBuffer((uint16_t*)pixels, x, y, w, h);
+	DisplayDriver_TransferCompleteCallback();
+}
 /* USER CODE END 4 */
 
 /**
