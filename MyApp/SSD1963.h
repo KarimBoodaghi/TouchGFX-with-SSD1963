@@ -256,6 +256,12 @@ void touchgfx_signalVSync(void);
 //#define LCD_RST_S HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_SET);
 //#define LCD_RST_R HAL_GPIO_WritePin(LCD_RST_PORT, LCD_RST_PIN, GPIO_PIN_RESET);
 
+void SSD1963_GPIO_ON(void);
+void SSD1963_GPIO_OFF(void);
+void SSD1963_GPIO_Toggle(void);
+void LCD_DrawPixels(uint16_t *p, uint32_t num, int16_t Xpos, int16_t Ypos);
+void LCD_drawBuffer(uint16_t *p, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);
+
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

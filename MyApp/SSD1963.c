@@ -1,8 +1,4 @@
 
-
-
-
-
 #include "SSD1963.h"
 #include <string.h>
 typedef unsigned short u16;
@@ -10,6 +6,7 @@ typedef unsigned short u16;
 typedef unsigned int u32;
 
 uint16_t CurrentTextColor = 0x0000, CurrentBackColor = 0xFFFF;
+uint8_t SSD1963_IO = 0;
 
 void SSD1963_WriteCommand(uint16_t cmd)
 {
@@ -226,12 +223,12 @@ void SSD1963_Init (void)
 
 	LCD_Delay(1);
 
-	SSD1963_WriteCommand(0xB8);
+	SSD1963_WriteCommand(SSD1963_SET_GPIO_CONF);
 	SSD1963_WriteData(0x03);
 	SSD1963_WriteData(0x01);
 
-	SSD1963_WriteCommand(0xBA);
-	SSD1963_WriteData(0x03);
+//	SSD1963_WriteCommand(SSD1963_SET_GPIO_VALUE);
+//	SSD1963_WriteData(0x03);
 
 	SSD1963_WriteCommand(SSD1963_ENTER_NORMAL_MODE);
 	SSD1963_WriteCommand(SSD1963_EXIT_IDLE_MODE);
@@ -522,21 +519,63 @@ uint16_t RGB_TO_565(int r , int g , int b)
 	return result;
 }
 //=============================================================================
-//
+// New Functions for SSD1963 GPIO
 //=============================================================================
-//uint16_t Get_Color(void)
-//{
-//	SSD1963_WriteCommand(SSD1963_SET_COLUMN_ADDRESS); //SET column address
-//	SSD1963_WriteData(0x00); //SET start column address=0
-//
-//	SSD1963_WriteCommand(SSD1963_SET_PAGE_ADDRESS); //SET page address
-//	SSD1963_WriteData(0x00); //SET start page address=0
-//}
+void SSD1963_GPIO_ON(void)
+{
+	SSD1963_WriteCommand(SSD1963_SET_GPIO_VALUE);
+	SSD1963_WriteData(0x03);
+}
+void SSD1963_GPIO_OFF(void)
+{
+	SSD1963_WriteCommand(SSD1963_SET_GPIO_VALUE);
+	SSD1963_WriteData(0x00);
+}
+void SSD1963_GPIO_Toggle(void)
+{
+	if(SSD1963_IO)
+	{
+		SSD1963_IO = 0;
+		SSD1963_GPIO_OFF();
+	}
+	else
+	{
+		SSD1963_IO = 1;
+		SSD1963_GPIO_ON();
+	}
+}
+
 //=============================================================================
-//
+// New Functions according RA8875 example
 //=============================================================================
-void Test_Func(void)
+void LCD_DrawPixels(uint16_t *p, uint32_t num, int16_t Xpos, int16_t Ypos)
 {
 
+	// writeReg(RA8875_CURH0, x);
+	// writeReg(RA8875_CURH1, x >> 8);
+	// writeReg(RA8875_CURV0, y);
+	// writeReg(RA8875_CURV1, y >> 8);
+	LCD_SetCursor(Xpos, Ypos);
+
+	// writeCMD(RA8875_MRWC);
+	LCD_WriteRAM_Prepare();
+
+	while(num--)
+	{
+		// writeData(*p++);
+		SSD1963_WriteData(*p++);
+	}
 }
+
+void LCD_drawBuffer(uint16_t *p, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)
+{
+	int i;
+	// LCD_BTE(0, 0, x, y, w, h, 0, 0);
+	LCD_SetDisplayWindow(Xpos, Ypos, Width, Height);
+	for(i = 0; i < Height; i++)
+	{
+		LCD_DrawPixels(p + Width * i, Width, Xpos, Ypos + i);
+	}
+}
+
 

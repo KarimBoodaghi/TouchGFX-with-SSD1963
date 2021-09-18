@@ -63,6 +63,13 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if(htim->Instance == TIM2)
+	{
+		SSD1963_GPIO_Toggle();
+	}
+}
 
 /* USER CODE END 0 */
 
@@ -101,6 +108,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   SSD1963_Init();
   LCD_Clear(0xF800);
+  HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
