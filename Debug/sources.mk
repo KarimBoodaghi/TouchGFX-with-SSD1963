@@ -39,6 +39,7 @@ TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/screen1_screen \
 TouchGFX/generated/images/src \
+TouchGFX/generated/images/src/__designer \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/model \

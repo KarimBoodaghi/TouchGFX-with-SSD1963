@@ -1,5 +1,6 @@
 Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	16	static
 Types.hpp:127:5:touchgfx::Rect::Rect()	16	static
+Bitmap.hpp:123:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	16	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	16	static
 Drawable.hpp:62:13:touchgfx::Drawable::~Drawable()	16	static
 Drawable.hpp:62:13:virtual touchgfx::Drawable::~Drawable()	16	static
@@ -16,6 +17,7 @@ Drawable.hpp:354:18:virtual void touchgfx::Drawable::handleGestureEvent(const to
 Drawable.hpp:365:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	16	static
 Drawable.hpp:442:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
 Drawable.hpp:452:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
+Drawable.hpp:476:10:void touchgfx::Drawable::setTouchable(bool)	16	static
 Drawable.hpp:488:10:bool touchgfx::Drawable::isVisible() const	16	static
 Drawable.hpp:500:10:bool touchgfx::Drawable::isTouchable() const	16	static
 Drawable.hpp:539:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
@@ -35,14 +37,20 @@ Widget.hpp:36:7:touchgfx::Widget::~Widget()	16	static
 Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	16	static
 Box.hpp:33:5:touchgfx::Box::Box()	16	static
 Box.hpp:63:10:void touchgfx::Box::setColor(touchgfx::colortype)	16	static
+AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	16	static
+AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	16	static
+AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
+Button.hpp:34:5:touchgfx::Button::Button()	16	static
 View.hpp:36:7:touchgfx::View<Screen1Presenter>::~View()	16	static
 View.hpp:36:7:virtual touchgfx::View<Screen1Presenter>::~View()	16	static
-Screen1ViewBase.hpp:16:13:Screen1ViewBase::~Screen1ViewBase()	16	static
-Screen1ViewBase.hpp:16:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
-Screen1ViewBase.cpp:7:1:Screen1ViewBase::Screen1ViewBase()	40	static
-Screen1ViewBase.cpp:16:6:virtual void Screen1ViewBase::setupScreen()	16	static
+Screen1ViewBase.hpp:17:13:Screen1ViewBase::~Screen1ViewBase()	16	static
+Screen1ViewBase.hpp:17:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
+Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	56	static
+Screen1ViewBase.cpp:25:6:virtual void Screen1ViewBase::setupScreen()	16	static
 View.hpp:39:5:touchgfx::View<T>::View() [with T = Screen1Presenter]	16	static
 Container.hpp:40:7:touchgfx::Container::~Container()	16	static
 Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
 Box.hpp:29:7:touchgfx::Box::~Box()	16	static
 Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
+Button.hpp:31:7:touchgfx::Button::~Button()	16	static
+Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static

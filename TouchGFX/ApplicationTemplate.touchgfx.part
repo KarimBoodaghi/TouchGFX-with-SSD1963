@@ -10,8 +10,8 @@
     },
     "AvailableResolutions" : [
       {
-        "Width": 240,
-        "Height": 320
+        "Width": 800,
+        "Height": 480
       }
     ],
     "PostGenerateTargetCommand" : "touchgfx update_project --project-file=../TGFX_Test.ioc --platform=m4",

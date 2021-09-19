@@ -566,16 +566,23 @@ void LCD_DrawPixels(uint16_t *p, uint32_t num, int16_t Xpos, int16_t Ypos)
 		SSD1963_WriteData(*p++);
 	}
 }
-
+extern uint8_t isTransmittingData;
 void LCD_drawBuffer(uint16_t *p, uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height)
 {
 	int i;
 	// LCD_BTE(0, 0, x, y, w, h, 0, 0);
 	LCD_SetDisplayWindow(Xpos, Ypos, Width, Height);
+//	SSD1963_WriteCommand(SSD1963_SET_ADDRESS_MODE);
+//	SSD1963_WriteData(0x84);
 	for(i = 0; i < Height; i++)
 	{
 		LCD_DrawPixels(p + Width * i, Width, Xpos, Ypos + i);
 	}
+
+	isTransmittingData = 0;
+//	SSD1963_WriteCommand(SSD1963_SET_ADDRESS_MODE);
+//	SSD1963_WriteData(0x00);
+//	LCD_SetDisplayWindow(0, 0, 800, 480);
 }
 
 

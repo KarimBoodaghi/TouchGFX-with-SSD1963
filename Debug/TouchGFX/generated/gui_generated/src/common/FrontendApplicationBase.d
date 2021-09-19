@@ -39,6 +39,8 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
@@ -131,6 +133,10 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 

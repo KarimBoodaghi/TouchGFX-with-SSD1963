@@ -33,7 +33,9 @@ TouchGFX/gui/src/screen1_screen/Screen1Presenter.o: \
  ../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 
@@ -102,3 +104,7 @@ TouchGFX/gui/src/screen1_screen/Screen1Presenter.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:

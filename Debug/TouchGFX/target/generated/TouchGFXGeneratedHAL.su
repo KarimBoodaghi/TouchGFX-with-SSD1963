@@ -47,18 +47,18 @@ TouchGFXGeneratedHAL.cpp:280:17:void LCD_IO_WriteReg(uint8_t)	16	static
 TouchGFXGeneratedHAL.cpp:291:21:uint16_t LCD_IO_ReadData()	8	static
 TouchGFXGeneratedHAL.cpp:301:17:void LCD_IO_Delay(uint32_t)	16	static
 FrameBufferAllocator.hpp:45:7:constexpr touchgfx::FrameBufferAllocator::FrameBufferAllocator()	16	static
-FrameBufferAllocator.hpp:136:5:touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::ManyBlockAllocator() [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	32	static
-FrameBufferAllocator.hpp:133:7:touchgfx::ManyBlockAllocator<1920, 3, 2>::~ManyBlockAllocator()	16	static
-FrameBufferAllocator.hpp:133:7:virtual touchgfx::ManyBlockAllocator<1920, 3, 2>::~ManyBlockAllocator()	16	static
+FrameBufferAllocator.hpp:136:5:touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::ManyBlockAllocator() [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	32	static
+FrameBufferAllocator.hpp:133:7:touchgfx::ManyBlockAllocator<4800, 3, 2>::~ManyBlockAllocator()	16	static
+FrameBufferAllocator.hpp:133:7:virtual touchgfx::ManyBlockAllocator<4800, 3, 2>::~ManyBlockAllocator()	16	static
 TouchGFXGeneratedHAL.hpp:28:7:TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
 TouchGFXGeneratedHAL.hpp:28:7:virtual TouchGFXGeneratedHAL::~TouchGFXGeneratedHAL()	16	static
 TouchGFXGeneratedHAL.cpp:305:1:void __static_initialization_and_destruction_0(int, int)	16	static
-FrameBufferAllocator.hpp:159:22:uint16_t touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::allocateBlock(uint16_t, uint16_t, uint16_t, uint16_t, uint8_t**) [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	32	static
-FrameBufferAllocator.hpp:183:18:void touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::markBlockReadyForTransfer() [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	16	static
-FrameBufferAllocator.hpp:195:18:bool touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::hasBlockReadyForTransfer() [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	24	static
-FrameBufferAllocator.hpp:214:28:const uint8_t* touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::getBlockForTransfer(touchgfx::Rect&) [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	16	static
-FrameBufferAllocator.hpp:227:25:const touchgfx::Rect& touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::peekBlockForTransfer() [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	24	static
-FrameBufferAllocator.hpp:238:18:bool touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::hasEmptyBlock() [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	24	static
-FrameBufferAllocator.hpp:253:18:void touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::freeBlockAfterTransfer() [with long unsigned int block_size = 1920; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	16	static
+FrameBufferAllocator.hpp:159:22:uint16_t touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::allocateBlock(uint16_t, uint16_t, uint16_t, uint16_t, uint8_t**) [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	32	static
+FrameBufferAllocator.hpp:183:18:void touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::markBlockReadyForTransfer() [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	16	static
+FrameBufferAllocator.hpp:195:18:bool touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::hasBlockReadyForTransfer() [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	24	static
+FrameBufferAllocator.hpp:214:28:const uint8_t* touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::getBlockForTransfer(touchgfx::Rect&) [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	16	static
+FrameBufferAllocator.hpp:227:25:const touchgfx::Rect& touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::peekBlockForTransfer() [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	24	static
+FrameBufferAllocator.hpp:238:18:bool touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::hasEmptyBlock() [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	24	static
+FrameBufferAllocator.hpp:253:18:void touchgfx::ManyBlockAllocator<block_size, blocks, bytes_pr_pixel>::freeBlockAfterTransfer() [with long unsigned int block_size = 4800; long unsigned int blocks = 3; long unsigned int bytes_pr_pixel = 2]	16	static
 TouchGFXGeneratedHAL.cpp:305:1:cpp)	8	static
 TouchGFXGeneratedHAL.cpp:305:1:cpp)	8	static
