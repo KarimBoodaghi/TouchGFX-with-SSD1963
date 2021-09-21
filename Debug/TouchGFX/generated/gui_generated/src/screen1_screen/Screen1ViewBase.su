@@ -41,12 +41,20 @@ AbstractButton.hpp:36:5:touchgfx::AbstractButton::AbstractButton()	16	static
 AbstractButton.hpp:32:7:touchgfx::AbstractButton::~AbstractButton()	16	static
 AbstractButton.hpp:32:7:virtual touchgfx::AbstractButton::~AbstractButton()	16	static
 Button.hpp:34:5:touchgfx::Button::Button()	16	static
+TypedText.hpp:59:14:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
+TextArea.hpp:42:5:touchgfx::TextArea::TextArea()	16	static
+TextArea.hpp:39:7:touchgfx::TextArea::~TextArea()	16	static
+TextArea.hpp:39:7:virtual touchgfx::TextArea::~TextArea()	16	static
+TextAreaWithWildcard.hpp:37:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	16	static
+TextAreaWithWildcard.hpp:58:10:void touchgfx::TextAreaWithOneWildcard::setWildcard(const UnicodeChar*)	16	static
 View.hpp:36:7:touchgfx::View<Screen1Presenter>::~View()	16	static
 View.hpp:36:7:virtual touchgfx::View<Screen1Presenter>::~View()	16	static
-Screen1ViewBase.hpp:17:13:Screen1ViewBase::~Screen1ViewBase()	16	static
-Screen1ViewBase.hpp:17:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
-Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	56	static
-Screen1ViewBase.cpp:25:6:virtual void Screen1ViewBase::setupScreen()	16	static
+Screen1ViewBase.hpp:18:13:Screen1ViewBase::~Screen1ViewBase()	16	static
+Screen1ViewBase.hpp:18:13:virtual Screen1ViewBase::~Screen1ViewBase()	16	static
+Screen1ViewBase.cpp:9:1:Screen1ViewBase::Screen1ViewBase()	104	static
+Screen1ViewBase.cpp:34:6:virtual void Screen1ViewBase::setupScreen()	16	static
 View.hpp:39:5:touchgfx::View<T>::View() [with T = Screen1Presenter]	16	static
 Container.hpp:40:7:touchgfx::Container::~Container()	16	static
 Container.hpp:40:7:virtual touchgfx::Container::~Container()	16	static
@@ -54,3 +62,5 @@ Box.hpp:29:7:touchgfx::Box::~Box()	16	static
 Box.hpp:29:7:virtual touchgfx::Box::~Box()	16	static
 Button.hpp:31:7:touchgfx::Button::~Button()	16	static
 Button.hpp:31:7:virtual touchgfx::Button::~Button()	16	static
+TextAreaWithWildcard.hpp:34:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static
+TextAreaWithWildcard.hpp:34:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	16	static

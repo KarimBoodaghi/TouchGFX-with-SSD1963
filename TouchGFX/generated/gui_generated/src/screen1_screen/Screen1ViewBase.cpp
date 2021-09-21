@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include "BitmapDatabase.hpp"
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase()
 {
@@ -17,9 +18,17 @@ Screen1ViewBase::Screen1ViewBase()
     button1.setXY(315, 210);
     button1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
 
+    textArea1.setPosition(315, 270, 170, 22);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea1.setLinespacing(0);
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T_SINGLEUSEID3).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.setTypedText(touchgfx::TypedText(T_SINGLEUSEID2));
+
     add(__background);
     add(box1);
     add(button1);
+    add(textArea1);
 }
 
 void Screen1ViewBase::setupScreen()

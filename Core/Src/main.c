@@ -63,6 +63,7 @@ extern void DisplayDriver_TransferCompleteCallback();
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+uint16_t Test_Counter;
 extern void touchgfxSignalVSync(void);
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -70,6 +71,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
 		SSD1963_GPIO_Toggle();
 		touchgfxSignalVSync();
+		Test_Counter++;
 	}
 }
 

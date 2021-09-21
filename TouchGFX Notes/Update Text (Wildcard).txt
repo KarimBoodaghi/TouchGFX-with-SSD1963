@@ -1,0 +1,22 @@
+/*=============================================================================================================================*/
+/*** Added Code to D:\ST\STM32CubeIDE_Workspace\TGFX_Test\TouchGFX\gui\include\gui\screen1_screen\Screen1View.hpp ***/
+class Screen1View : public Screen1ViewBase
+{
+public:
+    Screen1View();
+    virtual ~Screen1View() {}
+    virtual void setupScreen();
+    virtual void tearDownScreen();
+    virtual void handleTickEvent(); /*** This Line is Added ***/
+protected:
+};
+/*=============================================================================================================================*/
+/*** Added Code to D:\ST\STM32CubeIDE_Workspace\TGFX_Test\TouchGFX\gui\src\screen1_screen\Screen1View.cpp ***/
+extern uint16_t Test_Counter;
+void Screen1View::handleTickEvent() /*** This Class is Added. The name should be "handleTickEvent" else it doesn't work. ***/
+{
+	Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%d", Test_Counter);
+	textArea1.invalidate();
+}
+
+/*** Variable Test_Counter can be change anywhere in code i.e in main.c ***/

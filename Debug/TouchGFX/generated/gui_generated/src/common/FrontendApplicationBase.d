@@ -41,8 +41,11 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/BlitOp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/DMA.hpp \
@@ -138,9 +141,15 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
-../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
 

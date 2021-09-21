@@ -40,6 +40,35 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Type": "TextArea",
+            "TextId": "SingleUseId2",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 0,
+              "Green": 0,
+              "Blue": 0
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId3",
+              "UseBuffer": true,
+              "BufferSize": 10
+            },
+            "Name": "textArea1",
+            "X": 315,
+            "Y": 270,
+            "Width": 170,
+            "Height": 22,
+            "Visible": true,
+            "LockPosition": false,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [],
@@ -49,6 +78,16 @@
       }
     ],
     "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      }
+    ],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 800,

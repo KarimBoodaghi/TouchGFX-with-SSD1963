@@ -21,6 +21,7 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
       model(m)
 {
     touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_LANDSCAPE);
+    touchgfx::Texts::setLanguage(GB);
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
 }
 

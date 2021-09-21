@@ -5,13 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../TouchGFX/generated/images/src/BitmapDatabase.cpp 
+../TouchGFX/generated/images/src/BitmapDatabase.cpp \
+../TouchGFX/generated/images/src/image_Back1.cpp 
 
 OBJS += \
-./TouchGFX/generated/images/src/BitmapDatabase.o 
+./TouchGFX/generated/images/src/BitmapDatabase.o \
+./TouchGFX/generated/images/src/image_Back1.o 
 
 CPP_DEPS += \
-./TouchGFX/generated/images/src/BitmapDatabase.d 
+./TouchGFX/generated/images/src/BitmapDatabase.d \
+./TouchGFX/generated/images/src/image_Back1.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
