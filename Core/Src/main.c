@@ -28,7 +28,8 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+//HAL_RCC_GetHCLKFreq()
+uint32_t Main_Clock = 0, ABP1_Clock, ABP2_Clock;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -69,7 +70,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance == TIM2)
 	{
-		SSD1963_GPIO_Toggle();
 		touchgfxSignalVSync();
 		Test_Counter++;
 	}
@@ -112,6 +112,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   SSD1963_Init();
   LCD_Clear(0xF800);
+
+  Main_Clock = HAL_RCC_GetHCLKFreq();
+  ABP1_Clock = HAL_RCC_GetPCLK1Freq();
+  ABP2_Clock = HAL_RCC_GetPCLK2Freq();
   HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
 
@@ -123,6 +127,7 @@ int main(void)
 
   MX_TouchGFX_Process();
     /* USER CODE BEGIN 3 */
+  //SSD1963_GPIO_Toggle(); /*** To check SSD1963 connection, NOT necessary. ***/
   }
   /* USER CODE END 3 */
 }
@@ -212,12 +217,12 @@ static void MX_TIM2_Init(void)
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   /* USER CODE BEGIN TIM2_Init 1 */
-
+  //Timer 2 Clock: 84 MHz, PSC = 39, ARR = 62999 ==> 30 ms
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 10000-1;
+  htim2.Init.Prescaler = 39;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 6720-1;
+  htim2.Init.Period = 62999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)

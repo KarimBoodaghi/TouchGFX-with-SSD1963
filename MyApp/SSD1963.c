@@ -152,6 +152,9 @@ void SSD1963_Init (void)
 
 	LCD_Delay(20);
 
+	SSD1963_WriteCommand(SSD1963_SOFT_RESET);
+	LCD_Delay(20);
+
 	SSD1963_WriteCommand(SSD1963_SET_LCD_MODE);
 	SSD1963_WriteData(0x20);
 	SSD1963_WriteData(0x00);
